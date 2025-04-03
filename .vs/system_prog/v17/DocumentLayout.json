@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "lab_2.txt",
+              "DocumentMoniker": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt",
+              "RelativeDocumentMoniker": "system_prog\\lab_2.txt",
+              "ToolTip": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt",
+              "RelativeToolTip": "system_prog\\lab_2.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-03T14:25:43.948Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -53,7 +70,7 @@
               "RelativeDocumentMoniker": "system_prog\\lab_2.cs",
               "ToolTip": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.cs",
               "RelativeToolTip": "system_prog\\lab_2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:14:04.05Z",
               "EditorCaption": ""
@@ -66,7 +83,7 @@
               "RelativeDocumentMoniker": "system_prog\\Program.cs",
               "ToolTip": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\Program.cs",
               "RelativeToolTip": "system_prog\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T10:33:03.353Z",
               "EditorCaption": ""

@@ -2,7 +2,7 @@
 
 class SystemProg
 {
-void Main(string[] args)
+static void Main(string[] args)
 {
     Lab1.Lab_1();
 }

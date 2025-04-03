@@ -1,0 +1,4 @@
+/Users/svetatugay/C#Projects/system_prog/system_prog/obj/Debug/net9.0/system_prog.GeneratedMSBuildEditorConfig.editorconfig
+/Users/svetatugay/C#Projects/system_prog/system_prog/obj/Debug/net9.0/system_prog.AssemblyInfoInputs.cache
+/Users/svetatugay/C#Projects/system_prog/system_prog/obj/Debug/net9.0/system_prog.AssemblyInfo.cs
+/Users/svetatugay/C#Projects/system_prog/system_prog/obj/Debug/net9.0/system_prog.csproj.CoreCompileInputs.cache

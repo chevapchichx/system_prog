@@ -1,15 +1,18 @@
 ﻿using System;
 
-class SystemProg
+namespace SystemProg
 {
-static void Main(string[] args)
-{
-    //Lab1.Lab_1();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Lab1.Lab_1();
 
-    Lab2.Lab_2();
+            Lab2.Lab_2();
 
+
+        }
 
     }
-
 }
 

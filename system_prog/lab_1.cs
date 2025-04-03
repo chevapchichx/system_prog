@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
+using SystemProg;
 
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
 struct OSVERSIONINFO

@@ -1,5 +1,19 @@
-﻿################################################################################
-# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
-################################################################################
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
 
-/.vs/system_prog/FileContentIndex
+# Build results
+bin/
+obj/
+
+# .NET
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db

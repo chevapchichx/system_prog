@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:system_prog\\lab_2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "lab_2.txt",
               "DocumentMoniker": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.txt",
               "RelativeDocumentMoniker": "system_prog\\lab_2.txt",
@@ -46,25 +46,23 @@
               "RelativeToolTip": "system_prog\\lab_2.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-03T14:25:43.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T14:25:43.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\Program.cs",
               "RelativeDocumentMoniker": "system_prog\\Program.cs",
               "ToolTip": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\Program.cs",
               "RelativeToolTip": "system_prog\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T10:33:03.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T10:33:03.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "lab_1.cs",
               "DocumentMoniker": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_1.cs",
               "RelativeDocumentMoniker": "system_prog\\lab_1.cs",
@@ -72,21 +70,19 @@
               "RelativeToolTip": "system_prog\\lab_1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:15:45.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T14:15:45.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "lab_2.cs",
               "DocumentMoniker": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.cs",
               "RelativeDocumentMoniker": "system_prog\\lab_2.cs",
               "ToolTip": "C:\\Users\\tugai\\source\\repos\\chevapchichx\\system_prog\\system_prog\\lab_2.cs",
               "RelativeToolTip": "system_prog\\lab_2.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:14:04.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T14:14:04.05Z"
             }
           ]
         }

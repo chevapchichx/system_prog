@@ -28,6 +28,20 @@ namespace SystemProg
         }
 
         [StructLayout(LayoutKind.Sequential)]
+        public struct MEMORYSTATUSEX
+        {
+            public uint dwLength;
+            public uint dwMemoryLoad;
+            public ulong ullTotalPhys;
+            public ulong ullAvailPhys;
+            public ulong ullTotalPageFile;
+            public ulong ullAvailPageFile;
+            public ulong ullTotalVirtual;
+            public ulong ullAvailVirtual;
+            public ulong ullAvailExtendedVirtual;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
         public struct PROCESSENTRY32
         {
             public uint dwSize;
@@ -60,6 +74,10 @@ namespace SystemProg
 
         [DllImport("kernel32.dll")]
         static extern void GlobalMemoryStatus(ref MEMORYSTATUS lpBuffer);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool GlobalMemoryStatusEx(ref MEMORYSTATUSEX lpBuffer);
 
         [DllImport("kernel32.dll")]
         static extern IntPtr CreateToolhelp32Snapshot(uint dwFlags, uint th32ProcessID);
@@ -97,9 +115,9 @@ namespace SystemProg
             this.Text = "Memory Monitor";
 
             // Memory info labels
-            // Добавьте свойство AutoSize для Label, чтобы текст не сливался.  
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ AutoSize пїЅпїЅпїЅ Label, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.  
             memoryLoadLabel = new Label() { Location = new Point(10, 10), AutoSize = true };
-            totalPhysLabel = new Label() { Location = new Point(10, 30),  AutoSize = true };
+            totalPhysLabel = new Label() { Location = new Point(10, 30), AutoSize = true };
             availPhysLabel = new Label() { Location = new Point(10, 50), AutoSize = true };
             totalVirtualLabel = new Label() { Location = new Point(10, 70), AutoSize = true };
             availVirtualLabel = new Label() { Location = new Point(10, 90), AutoSize = true };
@@ -125,15 +143,18 @@ namespace SystemProg
 
         private void UpdateMemoryInfo()
         {
-            MEMORYSTATUS memStatus = new MEMORYSTATUS();
-            memStatus.dwLength = (uint)Marshal.SizeOf(typeof(MEMORYSTATUS));
-            GlobalMemoryStatus(ref memStatus);
+            MEMORYSTATUSEX memStatus = new MEMORYSTATUSEX();
+            memStatus.dwLength = (uint)Marshal.SizeOf(typeof(MEMORYSTATUSEX));
 
-            memoryLoadLabel.Text = $"Memory Load: {memStatus.dwMemoryLoad}%";
-            totalPhysLabel.Text = $"Total Physical Memory: {memStatus.ullTotalPhys / (1024 * 1024)} MB";
-            availPhysLabel.Text = $"Available Physical Memory: {memStatus.ullAvailPhys / (1024 * 1024)} MB";
-            totalVirtualLabel.Text = $"Total Virtual Memory: {memStatus.ullTotalVirtual / (1024 * 1024)} MB";
-            availVirtualLabel.Text = $"Available Virtual Memory: {memStatus.ullAvailVirtual / (1024 * 1024)} MB";
+            if (GlobalMemoryStatusEx(ref memStatus))
+            {
+                const double MB = 1024.0 * 1024.0;
+                memoryLoadLabel.Text = $"Memory Load: {memStatus.dwMemoryLoad}%";
+                totalPhysLabel.Text = $"Total Physical Memory: {memStatus.ullTotalPhys / MB:N0} MB";
+                availPhysLabel.Text = $"Available Physical Memory: {memStatus.ullAvailPhys / MB:N0} MB";
+                totalVirtualLabel.Text = $"Total Virtual Memory: {memStatus.ullTotalVirtual / MB:N0} MB";
+                availVirtualLabel.Text = $"Available Virtual Memory: {memStatus.ullAvailVirtual / MB:N0} MB";
+            }
         }
 
         private void UpdateProcessList()

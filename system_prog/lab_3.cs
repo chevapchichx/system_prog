@@ -15,33 +15,6 @@ namespace SystemProg
         private Label availVirtualLabel = new();
 
         [StructLayout(LayoutKind.Sequential)]
-        public struct MEMORYSTATUS
-        {
-            public uint dwLength;
-            public uint dwMemoryLoad;
-            public ulong ullTotalPhys;
-            public ulong ullAvailPhys;
-            public ulong ullTotalPageFile;
-            public ulong ullAvailPageFile;
-            public ulong ullTotalVirtual;
-            public ulong ullAvailVirtual;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct MEMORYSTATUSEX
-        {
-            public uint dwLength;
-            public uint dwMemoryLoad;
-            public ulong ullTotalPhys;
-            public ulong ullAvailPhys;
-            public ulong ullTotalPageFile;
-            public ulong ullAvailPageFile;
-            public ulong ullTotalVirtual;
-            public ulong ullAvailVirtual;
-            public ulong ullAvailExtendedVirtual;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
         public struct PROCESSENTRY32
         {
             public uint dwSize;
@@ -92,13 +65,6 @@ namespace SystemProg
         }
 
         [DllImport("kernel32.dll")]
-        static extern void GlobalMemoryStatus(ref MEMORYSTATUS lpBuffer);
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool GlobalMemoryStatusEx(ref MEMORYSTATUSEX lpBuffer);
-
-        [DllImport("kernel32.dll")]
         static extern IntPtr CreateToolhelp32Snapshot(uint dwFlags, uint th32ProcessID);
 
         [DllImport("kernel32.dll")]
@@ -136,15 +102,12 @@ namespace SystemProg
             this.MaximizeBox = false;
             this.Text = "Memory Monitor";
 
-            // Memory info labels
-            // �������� �������� AutoSize ��� Label, ����� ����� �� ��������.  
             memoryLoadLabel = new Label() { Location = new Point(10, 10), AutoSize = true };
             totalPhysLabel = new Label() { Location = new Point(10, 30), AutoSize = true };
             availPhysLabel = new Label() { Location = new Point(10, 50), AutoSize = true };
             totalVirtualLabel = new Label() { Location = new Point(10, 70), AutoSize = true };
             availVirtualLabel = new Label() { Location = new Point(10, 90), AutoSize = true };
 
-            // Process grid
             processGrid = new DataGridView
             {
                 Location = new Point(10, 120),

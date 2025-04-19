@@ -72,6 +72,25 @@ namespace SystemProg
             public ulong PeakPagefileUsage;
         }
 
+        [StructLayout(LayoutKind.Sequential)]
+        public struct PERFORMANCE_INFORMATION
+        {
+            public uint cb;
+            public UIntPtr CommitTotal;
+            public UIntPtr CommitLimit;
+            public UIntPtr CommitPeak;
+            public UIntPtr PhysicalTotal;
+            public UIntPtr PhysicalAvailable;
+            public UIntPtr SystemCache;
+            public UIntPtr KernelTotal;
+            public UIntPtr KernelPaged;
+            public UIntPtr KernelNonpaged;
+            public UIntPtr PageSize;
+            public uint HandleCount;
+            public uint ProcessCount;
+            public uint ThreadCount;
+        }
+
         [DllImport("kernel32.dll")]
         static extern void GlobalMemoryStatus(ref MEMORYSTATUS lpBuffer);
 
@@ -96,6 +115,9 @@ namespace SystemProg
 
         [DllImport("kernel32.dll")]
         static extern bool CloseHandle(IntPtr hObject);
+
+        [DllImport("psapi.dll", SetLastError = true)]
+        static extern bool GetPerformanceInfo([Out] out PERFORMANCE_INFORMATION PerformanceInformation, uint Size);
 
         const uint TH32CS_SNAPPROCESS = 0x00000002;
         const uint PROCESS_QUERY_INFORMATION = 0x0400;
@@ -143,17 +165,25 @@ namespace SystemProg
 
         private void UpdateMemoryInfo()
         {
-            MEMORYSTATUSEX memStatus = new MEMORYSTATUSEX();
-            memStatus.dwLength = (uint)Marshal.SizeOf(typeof(MEMORYSTATUSEX));
+            PERFORMANCE_INFORMATION perfInfo = new PERFORMANCE_INFORMATION();
+            perfInfo.cb = (uint)Marshal.SizeOf(typeof(PERFORMANCE_INFORMATION));
 
-            if (GlobalMemoryStatusEx(ref memStatus))
+            if (GetPerformanceInfo(out perfInfo, perfInfo.cb))
             {
+                ulong pageSize = (ulong)perfInfo.PageSize;
+                ulong totalPhysMem = (ulong)perfInfo.PhysicalTotal * pageSize;
+                ulong availPhysMem = (ulong)perfInfo.PhysicalAvailable * pageSize;
+                ulong totalVirtualMem = (ulong)perfInfo.CommitLimit * pageSize;
+                ulong usedVirtualMem = (ulong)perfInfo.CommitTotal * pageSize;
+
                 const double MB = 1024.0 * 1024.0;
-                memoryLoadLabel.Text = $"Memory Load: {memStatus.dwMemoryLoad}%";
-                totalPhysLabel.Text = $"Total Physical Memory: {memStatus.ullTotalPhys / MB:N0} MB";
-                availPhysLabel.Text = $"Available Physical Memory: {memStatus.ullAvailPhys / MB:N0} MB";
-                totalVirtualLabel.Text = $"Total Virtual Memory: {memStatus.ullTotalVirtual / MB:N0} MB";
-                availVirtualLabel.Text = $"Available Virtual Memory: {memStatus.ullAvailVirtual / MB:N0} MB";
+                int memoryLoad = (int)(((totalPhysMem - availPhysMem) * 100) / totalPhysMem);
+
+                memoryLoadLabel.Text = $"Memory Load: {memoryLoad}%";
+                totalPhysLabel.Text = $"Total Physical Memory: {totalPhysMem / MB:N0} MB";
+                availPhysLabel.Text = $"Available Physical Memory: {availPhysMem / MB:N0} MB";
+                totalVirtualLabel.Text = $"Total Virtual Memory: {totalVirtualMem / MB:N0} MB";
+                availVirtualLabel.Text = $"Available Virtual Memory: {(totalVirtualMem - usedVirtualMem) / MB:N0} MB";
             }
         }
 

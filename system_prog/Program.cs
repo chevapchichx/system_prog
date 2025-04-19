@@ -8,7 +8,9 @@ namespace SystemProg
         {
             //Lab1.Lab_1();
 
-            Lab2.Lab_2();
+            // Lab2.Lab_2();
+
+            Lab3.Lab_3();
 
 
         }

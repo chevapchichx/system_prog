@@ -91,21 +91,24 @@ namespace SystemProg
 
         private void InitializeComponents()
         {
-            this.Size = new Size(800, 600);
+            this.Size = new Size(540, 470);
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Text = "Memory Monitor";
 
             // Memory info labels
-            memoryLoadLabel = new Label() { Location = new Point(10, 10) };
-            totalPhysLabel = new Label() { Location = new Point(10, 30) };
-            availPhysLabel = new Label() { Location = new Point(10, 50) };
-            totalVirtualLabel = new Label() { Location = new Point(10, 70) };
-            availVirtualLabel = new Label() { Location = new Point(10, 90) };
+            // Добавьте свойство AutoSize для Label, чтобы текст не сливался.  
+            memoryLoadLabel = new Label() { Location = new Point(10, 10), AutoSize = true };
+            totalPhysLabel = new Label() { Location = new Point(10, 30),  AutoSize = true };
+            availPhysLabel = new Label() { Location = new Point(10, 50), AutoSize = true };
+            totalVirtualLabel = new Label() { Location = new Point(10, 70), AutoSize = true };
+            availVirtualLabel = new Label() { Location = new Point(10, 90), AutoSize = true };
 
             // Process grid
             processGrid = new DataGridView
             {
                 Location = new Point(10, 120),
-                Size = new Size(760, 430),
+                Size = new Size(500, 300),
                 AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
             };
             processGrid.Columns.Add("ProcessName", "Process Name");

@@ -10,7 +10,9 @@ namespace SystemProg
 
             // Lab2.Lab_2();
 
-            Lab3.Lab_3();
+            //Lab3.Lab_3();
+
+            Lab4.Lab_4();
 
 
         }
